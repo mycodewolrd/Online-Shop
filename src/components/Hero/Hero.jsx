@@ -12,7 +12,7 @@ const ImageList = [
         title: "30% off on all Women's Wear",
         description:
             "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
+
     },
     {
         id: 2,
@@ -54,7 +54,7 @@ const Hero = ({ handleOrderPopup }) => {
             <div className="container pb-8 sm:pb-0">
                 <Slider {...settings}>
                     {ImageList.map((data) => (
-                        <div>
+                        <div key={data.id}>
                             <div className="grid grid-cols-1 sm:grid-cols-2">
                                 {/* text content section */}
                                 <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
@@ -81,7 +81,7 @@ const Hero = ({ handleOrderPopup }) => {
                                     >
                                         <button
                                             onClick={handleOrderPopup}
-                                            className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+                                            className="bg-gradient-to-r from-primary to-secondary text-white py-2 px-4 rounded-full"
                                         >
                                             Order Now
                                         </button>
